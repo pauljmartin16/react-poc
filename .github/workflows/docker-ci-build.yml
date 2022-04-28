@@ -48,6 +48,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./react-poc-data-service
-          file: ./ReactPocDataService/Dockerfile
+          file: /ReactPocDataService/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/reactpocdataservice:latest, ${{ secrets.DOCKERHUB_USERNAME }}/reactpocdataservice:${{ github.run_number }}
