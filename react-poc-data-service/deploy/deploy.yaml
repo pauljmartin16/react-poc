@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reactdata
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reactdata 
+  template:
+    metadata:
+      labels:
+        app: reactdata
+    spec:
+      containers:
+      - image: pauljmartin16/reactpocdataservice
+        imagePullPolicy: Always
+        name: reactdata
+        ports:
+        - name: reactdata
+          containerPort: 80
+
