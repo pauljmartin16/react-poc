@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reactcra
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reactcra 
+  template:
+    metadata:
+      labels:
+        app: reactcra
+    spec:
+      containers:
+      - image: pauljmartin16/react-cra-ui-image
+        imagePullPolicy: Always
+        name: reactcra
+        ports:
+        - name: reactcra
+          containerPort: 80
+
