@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reactcomponents
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reactcomponents 
+  template:
+    metadata:
+      labels:
+        app: reactcomponents
+    spec:
+      hostAliases:
+      - ip: 45.79.245.110
+        hostnames:
+        - react-data-api
+        - react-components-api
+        - react-nginx-api
+      containers:
+      - image: pauljmartin16/react-nextjs-components-image
+        imagePullPolicy: Always
+        name: reactcomponents
+        ports:
+        - name: reactcomponents
+          containerPort: 80
