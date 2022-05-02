@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Dotnet React Test App</h1>
+
+@using (Html.BeginForm())
+{
+    <div style="margin:8px;border:1px solid silver;padding:8px;border-radius: 4px;">
+        <div>
+            <h2>SSR Rendering with IFrame</h2>
+            <input type="submit"
+               formaction="home/Navigate"
+               formmethod="post"
+               name="value"
+               value="SSR Speaker IFrame" />
+            <input type="submit"
+               formaction="home/Navigate"
+               formmethod="post"
+               name="value"
+               value="SSR House IFrame" />
+        </div>
+        <br />
+        <div>
+            <h2>SSR Rendering Embedded</h2>
+            <input type="submit"
+               formaction="home/Navigate"
+               formmethod="post"
+               name="value"
+               value="SSR Speaker Embedded" />
+            <input type="submit"
+               formaction="home/Navigate"
+               formmethod="post"
+               name="value"
+               value="SSR House Embedded" />
+        </div>
+    </div>
+
+    <hr />
+    <div style="margin:8px;border:1px solid silver;padding:8px;border-radius: 4px;">
+
+        <div>
+            <h2>CSR Rendering with IFrame</h2>
+            <input type="submit"
+               formaction="home/Navigate"
+               formmethod="post"
+               name="value"
+               value="CSR Speaker IFrame" />
+            <input type="submit"
+               formaction="home/Navigate"
+               formmethod="post"
+               name="value"
+               value="CSR House IFrame" />
+        </div>
+        <br />
+        <div>
+            <h2>CSR Rendering Embedded</h2>
+            <input type="submit"
+               formaction="home/Navigate"
+               formmethod="post"
+               name="value"
+               value="CSR Speaker Embedded" />
+            <input type="submit"
+               formaction="home/Navigate"
+               formmethod="post"
+               name="value"
+               value="CSR House Embedded" />
+        </div>
+    </div>
+
+    <hr />
+
+
+}
+
+<body>
+
+</body>
