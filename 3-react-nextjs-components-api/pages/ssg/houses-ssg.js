@@ -1,6 +1,6 @@
 import axios from "axios";
 import Link from 'next/link';
-import HouseProfileSsr from "../../src/houses/HouseProfileSsg";
+import HouseProfileSsg from "../../src/houses/HouseProfileSsg";
 import https from 'https';
 
 export async function getServerSideProps() {

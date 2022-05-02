@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnetmvcclient
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dotnetmvcclient 
+  template:
+    metadata:
+      labels:
+        app: dotnetmvcclient
+    spec:
+      containers:
+      - image: pauljmartin16/reactdotnetmvclient
+        imagePullPolicy: Always
+        name: dotnetmvcclient
+        ports:
+        - name: dotnetmvcclient
+          containerPort: 80
+

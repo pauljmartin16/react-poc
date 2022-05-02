@@ -1,16 +1,16 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: react-cra-service
+  name: react-dotnet-mvc-client-service
 spec:
   rules:
-  - host: react-cra
+  - host: react-dotnet-mvc-client
     http:
       paths:
       - pathType: Prefix
         path: /
         backend:
           service:
-            name: reactcra
+            name: dotnetmvcclient
             port: 
-              number: 5300
+              number: 5400
